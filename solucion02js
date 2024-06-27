@@ -1,0 +1,37 @@
+//  2 Completa la función operation para que realice las 4 operaciones básicas: suma, resta, multiplicacion 
+// y division. Dicha funcion debe tomar 3 argumentos: el operador, el primer valor y el segundo
+//  valor, además debe retornar el resultado.
+
+// function operation( operator, firstValue, secondValue ) {
+//     // Escribe la lógica de tu solución aquí
+    
+//     return result;
+// }
+// Al invocar la funcion operation condiferentes argumentos los resultados deberían ser los siguientes:
+
+// ('+', 3, 6) --> 9
+// ('-', 7, 3) --> -4
+// ('*', 9, 9) --> 81
+// ('/', 15, 3) --> 5
+
+const operacionesMatematicas = {
+  '+': (numero1, numero2) => numero1 + numero2,
+  '-': (numero1, numero2) => numero1 - numero2,
+  '*': (numero1, numero2) => numero1 * numero2,
+  '/': (numero1, numero2) => numero1 / numero2,
+};
+
+function realizarOperacion(operador, numero1, numero2) {
+  const funcionOperacion = operacionesMatematicas[operador];
+  if (funcionOperacion) {
+    return funcionOperacion(numero1, numero2);
+  } else {
+    return "Operación no válida";
+  }
+}
+
+// Coloca aquí los datos para realizar el ejercicio:
+console.log(realizarOperacion('+', 3, 6));   
+console.log(realizarOperacion('-', 7, 3));   
+console.log(realizarOperacion('*', 9, 9));   
+console.log(realizarOperacion('/', 15, 3));  
